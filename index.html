@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<style>
+			body {
+				background:#5352ed;
+				display:flex;
+				flex-direction: column;
+				margin:0;
+			}
+			#main {
+				display:grid;
+				grid-template-columns:repeat(4, 5fr);
+				grid-row-gap: 10px;
+				margin-top:50px;
+			}
+			.gallery {
+				margin:auto;
+				position:relative;
+			}
+			.gallery img {
+				max-width:315px;
+				max-height:250px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+		</div>
+	</body>
+</html>
+        <script>
+        var thumb = 0;
+        while (thumb < 40) {
+                var img = `<div class="gallery"><img src="/thumb?id=${thumb++}"/></div>`;
+                document.getElementById("main").innerHTML = img + document.getElementById("main").innerHTML;
+        }
+        </script>
+
